@@ -18,4 +18,4 @@ Korean (English soon)
 
 ---
 - Number Theory
-    - [AIME 2021 I Problem 3](NT/AIME21-I)
+    - [AIME 2021 I Problem 3](NT/AIME21-I-3.md)
