@@ -1,5 +1,5 @@
 # AIME 2021 I Problem 3
-`Number Theory`, `easy`
+`Number Theory` `Combinatorics` `easy`
 
 Problem
 ---
