@@ -6,8 +6,6 @@ remote: Counting objects: 100% (INF/INF), done.
 remote: Total INF (delta 0), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (INF/INF), done.
 
-> ls
-
 > math -license
 Apache License 2.0
 
@@ -17,3 +15,7 @@ RedoC-github(Sungjin Yang)
 > math -lang
 Korean (English soon)
 ```
+
+---
+- Number Theory
+    - [AIME 2021 I Problem 3](NT/AIME21-I)
