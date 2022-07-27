@@ -19,3 +19,5 @@ Korean (English soon)
 ---
 - Number Theory
     - [AIME 2021 I Problem 3](NT/AIME21-I-3.md)
+- Combinatorics
+    - [AIME 2021 I Problem 1](CO/AIME21-I-1.md)
