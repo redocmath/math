@@ -21,3 +21,5 @@ Korean (English soon)
     - [AIME 2021 I Problem 3](NT/AIME21-I-3.md)
 - Combinatorics
     - [AIME 2021 I Problem 1](CO/AIME21-I-1.md)
+- Geometry
+    - [AIME 2021 I Problem 2](GE/AIME21-I-2.md)
