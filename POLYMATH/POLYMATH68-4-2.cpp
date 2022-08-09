@@ -51,6 +51,5 @@ int main() {
     cin.tie(nullptr); cout.tie(nullptr);
     
     cin >> color;
-    // cout << solve(3,{0,1,0}) << "\n";
     cout << (solve(3, {0,1,2})*(color-2)+solve(3,{0,1,0})) * color * (color-1) << "\n";
 }
