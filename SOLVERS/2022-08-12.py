@@ -1,4 +1,4 @@
-# Get the smallest-element array which length is n, all elements are not prime
+# Get the smallest-element array whose length is n, all elements are not prime
 
 def prime_generator(n): #https:// stackoverflow.com/questions/11619942/print-series-of-prime-numbers-in-python
     out = list()
