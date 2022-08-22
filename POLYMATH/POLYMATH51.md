@@ -30,6 +30,6 @@ $ = \binom{n}{i} \cdot \binom{n-i}{j-i} \cdot \frac{i!(j-i)!}{j!} = \binom{n}{i}
 
 즉, $\binom{n}{j} \binom{j}{i} = \binom{n}{i} \binom{n-i}{j-i}$
 
-이때 $\binom{n}{j}$와 $\binom{n}{i}$이 서로소라면  
+이때 $\binom{n}{j}$와 $\binom{n}{i}$이 서로소라면 (Still thinking)
 
 $\therefore Ans=$
