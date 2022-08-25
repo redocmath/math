@@ -1,5 +1,5 @@
 # AIME 2021 I Problem 2
-`Geometry` `easy`
+`Geometry` `Easy`
 
 Problem
 ---

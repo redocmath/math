@@ -1,5 +1,5 @@
 # AIME 2021 I Problem 1
-`Combinatorics` `easy`
+`Combinatorics` `Easy`
 
 Problem
 ---
