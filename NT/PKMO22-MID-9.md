@@ -1,4 +1,4 @@
-# KMO Round 1 (PKMO for Middle School) Problem 3 
+# KMO Round 1 (PKMO for Middle School) Problem 9
 `Number Theory` `Easy`
 
 Problem
