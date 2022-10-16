@@ -12,7 +12,7 @@
 #include <cstring>
 #include <map>
 #include <random>
-#define A 10
+#define A 1
 
 using namespace std;
 typedef long long ll;
@@ -37,5 +37,5 @@ int main() {
         }
         if (tur == A) a += cnt;
     }
-    cout << "Average of jump number to arrive 10: " << (long double)(a) / (long double)(b) << "\n";
+    cout << "Average of jump number to arrive " << A << ": " << (long double)(a) / (long double)(b) << "\n";
 }
