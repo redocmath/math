@@ -66,21 +66,21 @@ t.goto(-900,0)
 
 trm = 1800/(step-1)
 
-for i in range(1, step):
-    t.dot()
-    t.write(i)
-    t.forward(trm)
+# for i in range(1, step):
+#     t.dot()
+#     t.write(str(i) + "\n/" + str(3**n), font=("Arial", 12))
+#     t.forward(trm)
 
-t.dot()
-t.write(step)
+# t.dot()
+# t.write(str(step) + "\n/" + str(3**n), font=("Arial", 12))
 
 for i in range(1, n+1):
     a,b = Gi(i, n, step)
     if (len(a) != len(b)): b.append(step)
     for j in range(len(a)):
-        t.goto(-900+trm*(a[j]-1), i*20)
+        t.goto(-900+trm*(a[j]-1), 20+i*20)
         t.pendown()
-        t.goto(-900+trm*(b[j]-1), i*20)
+        t.goto(-900+trm*(b[j]-1), 20+i*20)
         t.penup()
 
 input()
