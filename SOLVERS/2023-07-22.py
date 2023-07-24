@@ -110,7 +110,7 @@ def update(sofa):
         dR = (sofa.R(T)-sofa.R(T-epsilon))/epsilon
         
         dx = -dPx * m.cos(sofa.R(T)) + (dPy * m.sin(sofa.R(T)) - dR * sofa.P[i][1]) * sofa.rotation
-        dy = -dPy * m.cos(sofa.R(T)) - dPx * m.sin(sofa.R(T)) + dR * sofa.P[i][0] * sofa.rotation
+        dy = -dPy * m.cos(sofa.R(T)) + (-1 * dPx * m.sin(sofa.R(T)) + dR * sofa.P[i][0]) * sofa.rotation
         sofa.P[i] = (sofa.P[i][0] + dx*epsilon, sofa.P[i][1] + dy*epsilon)
 
 sofa = RHAM()
