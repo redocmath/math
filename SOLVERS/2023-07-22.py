@@ -1,3 +1,6 @@
+CLOCKWISE = 1
+COUNTERCLOCKWISE = -1
+
 import turtle as tr
 import math as m
 
@@ -6,12 +9,32 @@ c = 6
 epsilon = 0.01
 scale = 50
 
-class Hammersley:
-    init = (0, -1)
+class SOFA:
+    # default variable setting
+    init = (0, 0)
+    rotation = CLOCKWISE
     P = [(0-init[0],-1-init[1]), (c-init[0],-1-init[1]), (c-init[0],-1-c-init[1]), (c+2-init[0],-1-c-init[1]), (c+2-init[0],1-init[1]), (0-init[0],1-init[1])]
 
     def __init__(self):
         pass
+
+    def Px(self, t):
+        pass
+
+    def Py(self, t):
+        pass
+
+    def R(self, t):
+        if (T < 1):
+            return 0
+        elif (T <= 2):
+            return m.pi/2*(t-1)
+        else:
+            return m.pi/2
+
+class Hammersley(SOFA):
+    init = (0, -1)
+    P = [(0-init[0],-1-init[1]), (c-init[0],-1-init[1]), (c-init[0],-1-c-init[1]), (c+2-init[0],-1-c-init[1]), (c+2-init[0],1-init[1]), (0-init[0],1-init[1])]
 
     def Px(self, t):
         if (t <= 1):
@@ -29,13 +52,20 @@ class Hammersley:
         else:
             return -1*(c-4/m.pi)*(t-2)-1-4/m.pi
 
-    def R(self, t):
-        if (T < 1):
-            return 0
-        elif (T <= 2):
-            return m.pi/2*(t-1)
+class RHAM(SOFA):
+    rotation = COUNTERCLOCKWISE
+
+    def Px(self, t):
+        if (t <= 1):
+            return (c+1)*t
         else:
-            return m.pi/2
+            return c+1
+
+    def Py(self, t):
+        if (t < 2):
+            return 0
+        else:
+            return -(c+1)*(t-2)
 
 tr.setup(width=1500, height=1000)
 t = tr.Turtle(shape='circle')
@@ -79,11 +109,11 @@ def update(sofa):
         dPy = (sofa.Py(T)-sofa.Py(T-epsilon))/epsilon
         dR = (sofa.R(T)-sofa.R(T-epsilon))/epsilon
         
-        dx = -dPx * m.cos(sofa.R(T)) + dPy * m.sin(sofa.R(T)) - dR * sofa.P[i][1]
-        dy = -dPy * m.cos(sofa.R(T)) - dPx * m.sin(sofa.R(T)) + dR * sofa.P[i][0]
+        dx = -dPx * m.cos(sofa.R(T)) + (dPy * m.sin(sofa.R(T)) - dR * sofa.P[i][1]) * sofa.rotation
+        dy = -dPy * m.cos(sofa.R(T)) - dPx * m.sin(sofa.R(T)) + dR * sofa.P[i][0] * sofa.rotation
         sofa.P[i] = (sofa.P[i][0] + dx*epsilon, sofa.P[i][1] + dy*epsilon)
 
-sofa = Hammersley()
+sofa = RHAM()
 draw(sofa)
 T += epsilon
 while T <= 3:
