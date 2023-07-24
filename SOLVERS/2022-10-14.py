@@ -83,4 +83,4 @@ for i in range(1, n+1):
         t.goto(-900+trm*(b[j]-1), 20+i*20)
         t.penup()
 
-input()
+tr.done()
