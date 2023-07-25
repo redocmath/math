@@ -6,7 +6,7 @@ import math as m
 
 T = 0
 c = 6
-epsilon = 0.01
+epsilon = 0.001
 scale = 50
 
 class SOFA:
@@ -75,6 +75,8 @@ t.hideturtle()
 t.speed(0)
 t.width(2)
 
+s = tr.Screen()
+s.tracer(0)
 color = ['red', 'green', 'blue', 'black']
 
 
@@ -121,4 +123,5 @@ while T <= 3:
     draw(sofa)
     T += epsilon
 
+s.update()
 tr.done()
