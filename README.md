@@ -1,5 +1,5 @@
 ```zsh
-> git clone redoc-github/math 🧠/🔢
+> git clone redocmath/math 🧠/🔢
 Cloning into 'math'...
 remote: Enumerating objects: INF, done.
 remote: Counting objects: 100% (INF/INF), done.
