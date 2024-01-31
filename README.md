@@ -10,7 +10,7 @@ Unpacking objects: 100% (INF/INF), done.
 Apache License 2.0
 
 > math -author
-RedoC-github(Sungjin Yang)
+@redocmath (Sungjin Yang)
 
 > math -lang
 Korean (English soon)
